@@ -1,0 +1,77 @@
+# Upptime configuration for Krynox Captcha — https://status.krynox.net
+#
+# Upptime is an open-source uptime monitor + status page that runs ENTIRELY on
+# GitHub (Actions cron probes, Issues for incidents, Pages for the site). That
+# independence is the whole point: this page keeps working even when the VPS
+# behind api.krynox.net is down. Checks run every ~5 minutes; free for public
+# repos. One-time setup is in README.md.
+
+owner: krynox-security # GitHub org that owns the status repo
+repo: status # This repository's name
+
+# The GitHub user auto-assigned to the incident issue Upptime files on a failure.
+# Replace with the on-call maintainer's username.
+assignees:
+  - fahmikemal
+
+sites:
+  - name: Dashboard
+    icon: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png
+    # Control plane (SvelteKit / apps/web) — the marketing + login shell.
+    url: https://krynox.net
+    maxResponseTime: 5000
+
+  - name: API — Data plane
+    icon: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png
+    # GET /health → {"ok":true,"service":"krynox-captcha-api"}. Liveness of the
+    # challenge-issue + /siteverify path (apps/api on the VPS behind Cloudflare).
+    url: https://api.krynox.net/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 3000
+    # Confirm it's really our API answering, not a Cloudflare 200 error/interstitial:
+    # mark the site DOWN if the response body doesn't contain this text.
+    __dangerous__body-down-if-text-missing: "krynox-captcha-api"
+
+  - name: Widget CDN
+    icon: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png
+    # The <krynox-captcha> bundle served statically from Cloudflare Pages.
+    url: https://cdn.krynox.net/widget/krynox-captcha.js
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 4000
+
+  # End-to-end challenge issue (optional but recommended). Unlike /health this
+  # exercises the full Postgres + HMAC signing path. Fill in a real PUBLIC site
+  # key (kcpt_…) — public by design, safe to commit here — then uncomment.
+  # - name: Challenge issue
+  #   url: https://api.krynox.net/challenge?sitekey=kcpt_REPLACE_ME
+  #   expectedStatusCodes:
+  #     - 200
+  #   maxResponseTime: 4000
+
+status-website:
+  # Sets the CNAME file so GitHub Pages serves the site at this domain. See
+  # README.md for the matching DNS record.
+  cname: status.krynox.net
+  # IMPORTANT: host the logo IN this repo (assets/krynox-logo.png) and reference
+  # its raw URL — never point at krynox.net, or the status page would fail to
+  # render its own logo during the very outage it's meant to report.
+  logoUrl: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png
+  name: Krynox Status
+  introTitle: "**Krynox Captcha** — service status"
+  introMessage: >-
+    Real-time status of the Krynox dashboard, verification API, and widget CDN.
+    This page runs on GitHub, independent of our own infrastructure, so it stays
+    available even during an incident. Watch the
+    [status repository](https://github.com/krynox-security/status) to subscribe
+    to updates.
+  navbar:
+    - title: Status
+      href: /
+    - title: Docs
+      href: https://docs.krynox.net/
+    - title: Support
+      href: mailto:support@krynox.net
+    - title: Website
+      href: https://krynox.net
