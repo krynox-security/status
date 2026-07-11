@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Dashboard",
+    "url": "https://krynox.net",
+    "icon": "https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png",
+    "slug": "dashboard",
+    "status": "up",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
+    "time": 1484,
+    "timeDay": 1484,
+    "timeWeek": 1484,
+    "timeMonth": 1484,
+    "timeYear": 1484,
+    "dailyMinutesDown": {
+      "2026-07-11": 851,
+      "2026-07-10": 1440,
+      "2026-07-09": 1440,
+      "2026-07-08": 1440,
+      "2026-07-07": 268
+    }
+  },
+  {
+    "name": "API — Data plane",
+    "url": "https://api.krynox.net/health",
+    "icon": "https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png",
+    "slug": "api-data-plane",
+    "status": "up",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
+    "time": 1096,
+    "timeDay": 1096,
+    "timeWeek": 1096,
+    "timeMonth": 1096,
+    "timeYear": 1096,
+    "dailyMinutesDown": {
+      "2026-07-11": 851,
+      "2026-07-10": 1440,
+      "2026-07-09": 1440,
+      "2026-07-08": 1440,
+      "2026-07-07": 268
+    }
+  },
+  {
+    "name": "Widget CDN",
+    "url": "https://cdn.krynox.net/widget/krynox-captcha.js",
+    "icon": "https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png",
+    "slug": "widget-cdn",
+    "status": "up",
+    "uptime": "0.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
+    "time": 95,
+    "timeDay": 95,
+    "timeWeek": 95,
+    "timeMonth": 95,
+    "timeYear": 95,
+    "dailyMinutesDown": {
+      "2026-07-10": 314,
+      "2026-07-09": 1440,
+      "2026-07-08": 1440,
+      "2026-07-07": 268
+    }
+  }
+]
