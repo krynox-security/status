@@ -54,11 +54,19 @@ status-website:
   # Sets the CNAME file so GitHub Pages serves the site at this domain. See
   # README.md for the matching DNS record.
   cname: status.krynox.net
-  # IMPORTANT: host the logo IN this repo (assets/krynox-logo.png) and reference
-  # its raw URL — never point at krynox.net, or the status page would fail to
-  # render its own logo during the very outage it's meant to report.
-  logoUrl: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-logo.png
+  # IMPORTANT: host all brand assets IN this repo and reference their raw URLs —
+  # never point at krynox.net, or the status page would fail to render its own
+  # branding during the very outage it's meant to report.
+  #
+  # logoUrl is the full "Krynox Status" wordmark (the K mark fused with the "rynox"
+  # wordmark + a muted "Status" suffix — matching the app/docs brand treatment), so
+  # hideNavTitle drops the redundant text label next to it. `name` is kept for the
+  # HTML <title> / metadata.
+  logoUrl: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-wordmark.png
+  hideNavTitle: true
   name: Krynox Status
+  # Krynox "K" favicon (square) — replaces Upptime's default favicon.
+  favicon: https://raw.githubusercontent.com/krynox-security/status/master/assets/favicon.png
   introTitle: "**Krynox Captcha** — service status"
   introMessage: >-
     Real-time status of the Krynox dashboard, verification API, and widget CDN.
