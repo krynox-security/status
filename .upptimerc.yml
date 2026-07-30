@@ -58,11 +58,9 @@ status-website:
   # never point at krynox.net, or the status page would fail to render its own
   # branding during the very outage it's meant to report.
   #
-  # logoUrl is the full "Krynox Status" wordmark (the K mark fused with the "rynox"
-  # wordmark + a muted "Status" suffix — matching the app/docs brand treatment), so
-  # hideNavTitle drops the redundant text label next to it. `name` is kept for the
-  # HTML <title> / metadata.
-  logoUrl: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-wordmark.png
+  # Text-only Krynox. wordmark, matching marketing, auth, and docs. `name` stays
+  # descriptive for the document title and metadata while the navbar remains quiet.
+  logoUrl: https://raw.githubusercontent.com/krynox-security/status/master/assets/krynox-wordmark.svg
   hideNavTitle: true
   name: Krynox Status
   # Krynox "K" favicon (square) — replaces Upptime's default favicon.

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="40" viewBox="0 0 124 40" role="img" aria-labelledby="title">
+  <title id="title">Krynox</title>
+  <text
+    x="0"
+    y="31"
+    fill="#ffffff"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="30"
+    font-weight="600"
+    letter-spacing="-0.75"
+    textLength="106"
+    lengthAdjust="spacingAndGlyphs"
+  >Krynox</text>
+  <circle cx="115" cy="28" r="3" fill="#f0432e"/>
+</svg>
