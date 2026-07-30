@@ -29,9 +29,10 @@ scheduled workflows, the status-site build) comes from the Upptime template.
    [`.upptimerc.yml`](./.upptimerc.yml) from this folder, and set `assignees` to
    the on-call maintainer's GitHub username.
 
-3. **Add the logo.** Commit `assets/krynox-logo.png` (the light-mode mark) into the
-   repo so the page renders its own logo without depending on krynox.net. It's
-   already referenced by `logoUrl` in the config.
+3. **Add the brand assets.** Commit `assets/krynox-wordmark.svg` and
+   `assets/favicon.png` so the page renders the text-only Krynox. wordmark and
+   favicon without depending on krynox.net. They are already referenced by the
+   status website config.
 
 4. **Create the `GH_PAT` secret.** Upptime commits results and opens/closes
    incident issues, so it needs a token with more than the default.
