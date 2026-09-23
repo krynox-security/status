@@ -1,7 +1,7 @@
 url: https://api.krynox.net/health
-status: degraded
+status: up
 code: 200
-responseTime: 3437
-lastUpdated: 2026-09-23T06:09:33.470Z
+responseTime: 1906
+lastUpdated: 2026-09-23T15:34:02.233Z
 startTime: 2026-07-11T20:26:30.018Z
 generator: Upptime <https://github.com/upptime/upptime>
